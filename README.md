@@ -31,13 +31,13 @@
 
 ## Estructura del proyecto
 src/main/java/
-├──PresentacionPersonal.java     → Main (punto de entrada)
-├──Portafolio.java               → Datos personales encapsulados
-├──Estudio.java                  → Clase para estudios/certificaciones
-├──Experiencia.java              → Clase para experiencia laboral
-├──MenuPrincipal.java            → Lógica del menú interactivo
-├──Proyecto.java                 → Clase para Proyectos y Github 
-├──ApiService.java               → Consumo de PokeAPI + Pokémon aleatorio
+├── PresentacionPersonal.java     → Main y punto de entrada
+├── Portafolio.java               → Datos personales encapsulados
+├── Estudio.java                  → Clase para estudios
+├── Proyecto.java                 → Proyecto con apertura en navegador
+├── MenuPrincipal.java            → Lógica completa del menú
+├── ApiService.java               → Consumo de PokeAPI con org.json
+├── NavegadorService.java         → Utilidad para abrir URLs
 
 ## Cómo ejecutarlo
 
