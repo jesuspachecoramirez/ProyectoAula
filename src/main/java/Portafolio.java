@@ -1,23 +1,31 @@
 import java.util.ArrayList;
 
-
+/**
+ * Modelo principal del portafolio.
+ * Contiene la información personal, habilidades, estudios, proyectos y experiencias laborales.
+ * Al instanciarse, precarga datos iniciales en sus listas.
+ */
 public class Portafolio {
-    private String nombre = "Jesus Pacheco";
-    private String titulo = "Desarrollador Backend | RPA | Salesforce";
-    private int edad = 36;
+    private String nombre = "Jesus Pacheco"; // Nombre del propietario del portafolio
+    private String titulo = "Desarrollador Backend | RPA | Salesforce"; // Título laboral
+    private int edad = 36; // Edad actual
+
+    // Tecnologías/herramientas dominadas
     private String[] habilidades = {"Java", "Python", "Selenium", "RestAssured", "Apex", "Git", "Postman", "Azure", "Metodologías ágiles"};
 
+    // Listas que almacenan las secciones del portafolio
     private ArrayList<Estudio> estudios = new ArrayList<>();
     private ArrayList<Proyecto> proyectos = new ArrayList<>();
-
     private ArrayList<Experiencia>experiencias = new ArrayList<>();
 
+    //Constructor por defecto. Inicializa el portafolio cargando estudios, proyectos y experiencia.
     public Portafolio() {
         cargarEstudios();
         cargarProyectos();
         cargarExperiencia();
     }
 
+    // Carga la lista de estudios con registros base del portafolio.
     private void cargarEstudios() {
         estudios.add(new Estudio("Tecnico en Sistemas", "SENA", 2017, 2019));
         estudios.add(new Estudio("Desarrollo Web", "Universidad del Bosque", 2020, 2021));
@@ -25,6 +33,7 @@ public class Portafolio {
         estudios.add(new Estudio("Tecnologia en Desarrollo Web", "ITM", 2025,0));
     }
 
+    // Carga la lista de proyectos con enlaces a repositorios.
     private void cargarProyectos() {
         proyectos.add(new Proyecto("Automatizacion Carrera", "https://github.com/jesuspachecoramirez/Reto-Carros.git"));
         proyectos.add(new Proyecto("Juego de Preguntas", "https://github.com/jesuspachecoramirez/Reto-Preguntas.git"));
@@ -39,6 +48,7 @@ public class Portafolio {
 
     }
 
+    // Carga la lista de experiencias laborales con registros base del portafolio.
     private void cargarExperiencia(){
         experiencias.add(new Experiencia("Instituto de Investigacion Maritima", "Auxiliar de Sistemas", 2018,2019));
         experiencias.add(new Experiencia("Analista de Calidad", "Sofka", 2022, 2023));
@@ -47,7 +57,7 @@ public class Portafolio {
         experiencias.add(new Experiencia("Lider Técnico", "Savant", 2024, 0));
     }
 
-    // Getters
+    // Getters para acceder a los datos del portafolio desde el menú
     public String getNombre() { return nombre; }
     public String getTitulo() { return titulo; }
     public int getEdad() { return edad; }
