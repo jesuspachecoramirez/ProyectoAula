@@ -49,10 +49,13 @@
 2. Ejecuta la clase `PresentacionPersonal.java`
 
 ### Desde terminal bash
+```
 javac *.java
 java PresentacionPersonal
+```
 
 ### Con Maven
+```
 mvn compile
-mvn exec:java -Dexec.mainClass="PresentacionPersonal"
+mvn exec:java -Dexec.mainClass="PresentacionPersonal"```
 
